@@ -17,8 +17,8 @@ WORKDIR /root/src
 RUN apt-get install -y ffmpeg && go mod download && \
     go build -o ./main ./core/main.go
 
-# ポート5000を外部に公開
-#EXPOSE 5000
+# ポート8080を外部に公開
+EXPOSE 8080
 
 # アプリケーションを実行
-#CMD ["./main"]
+CMD ["./main"]
